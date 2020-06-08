@@ -20,7 +20,7 @@ After this, run : python manage.py migrate
 
 Run: python manage.py runserver
 
-open http://127.0.0.1:000
+open http://127.0.0.1:8000
 
 Additional RestFul API :-
 
