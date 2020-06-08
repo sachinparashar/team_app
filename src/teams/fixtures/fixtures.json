@@ -1,0 +1,65 @@
+[
+    {
+        "model": "teams.match",
+        "pk": 1,
+        "fields": {
+            "team1": 7,
+            "team2": 8,
+            "winner": 7
+        }
+    },
+    {
+        "model": "teams.match",
+        "pk": 2,
+        "fields": {
+            "team1": 9,
+            "team2": 10,
+            "winner": 10
+        }
+    },
+    {
+        "model": "teams.match",
+        "pk": 3,
+        "fields": {
+            "team1": 11,
+            "team2": 12,
+            "winner": 11
+        }
+    },
+    {
+        "model": "teams.match",
+        "pk": 4,
+        "fields": {
+            "team1": 8,
+            "team2": 11,
+            "winner": 11
+        }
+    },
+    {
+        "model": "teams.match",
+        "pk": 5,
+        "fields": {
+            "team1": 10,
+            "team2": 7,
+            "winner": 7
+        }
+    },
+    {
+        "model": "teams.match",
+        "pk": 6,
+        "fields": {
+            "team1": 9,
+            "team2": 12,
+            "winner": 12
+        }
+    },
+    {
+        "model": "teams.match",
+        "pk": 7,
+        "fields": {
+            "team1": 7,
+            "team2": 12,
+            "winner": 12
+        }
+    }
+]

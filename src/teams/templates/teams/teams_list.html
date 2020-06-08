@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block content %}
+<div class="card">
+    <div class="card-header">
+        <h1>Teams List</h1>
+    </div>
+    <div>
+        {% if teams_list %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Team Logo</th>
+                    <th scope="col">Team Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for team in teams_list %}
+                <tr>
+                    <td><img height="50px" width="50px" src="/media/{{team.logo}}" alt="logo"></td>
+                    <td><a href="{% url 'teams:team_detail' slug=team.slug %}">{{team.title|title}}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No Teams found!!!</p>
+        {% endif %}
+    </div>
+    {% if is_paginated %}
+    <div class="pagination">
+        <span class="page-links">
+                                {% if page_obj.has_previous %}
+                                    <a href="/team?page={{ page_obj.previous_page_number }}">previous</a>
+                                {% endif %}
+                            <span class="page-current">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                            </span> {% if page_obj.has_next %}
+        <a href="/team?page={{ page_obj.next_page_number }}">next</a> {% endif %}
+        </span>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
